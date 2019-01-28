@@ -17,9 +17,9 @@ Plugin 'SirVer/ultisnips'
 "UltoSnips 代码集成块
 Plugin 'honza/vim-snippets'
 "Add gordon vim for config
-Plugin 'gordon87github/gordon.vim'
+Plugin 'windfog/gordon.vim'
 "Add translate plugin
-Plugin 'gordon87github/en-ch-translate.vim'
+Plugin 'windfog/en-ch-translate.vim'
 "＊＊＊＊＊＊被管理插件结束＊＊＊＊＊＊＊
 
 "vundle 运行结束
