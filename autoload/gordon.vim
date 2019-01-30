@@ -16,7 +16,8 @@ function! gordon#SettingUltisnips()
 endfunction
 
 function! gordon#SettingOneKeyRun()
-	autocmd FileType python nnoremap <leader>r :!clear;python3 %<cr>
+	autocmd FileType python nnoremap <leader>r :!clear \| python %<CR>
+	autocmd FileType python nnoremap <leader>3r :!clear \| python3 %<CR>
 endfunction
 
 function s:ChangeWinwidth(flag)
