@@ -23,6 +23,9 @@ function! gordon#SettingQuickConfig()
 	nnoremap <leader>ev :e $MYVIMRC<CR>
 	nnoremap <leader>sv :source $MYVIMRC \| bdelete .vimrc <CR>
 endfunction
+function! gordon#SettingCopy()
+	vnoremap <leader>c :<CR>:let temp=@" \| execute "normal! vgvy" \| system("pbcopy",@") \| let @"=temp<CR>
+endfunction
 
 function s:ChangeWinwidth(flag)
 	if a:flag
