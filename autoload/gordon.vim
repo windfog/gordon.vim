@@ -19,6 +19,10 @@ function! gordon#SettingOneKeyRun()
 	autocmd FileType python nnoremap <leader>r :!clear \| python %<CR>
 	autocmd FileType python nnoremap <leader>3r :!clear \| python3 %<CR>
 endfunction
+function! gordon#SettingQuickConfig()
+	nnoremap <leader>ev :e $MYVIMRC<CR>
+	nnoremap <leader>sv :source $MYVIMRC \| bdelete .vimrc <CR>
+endfunction
 
 function s:ChangeWinwidth(flag)
 	if a:flag
