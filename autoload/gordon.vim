@@ -28,6 +28,7 @@ function! gordon#SettingCopy()
 endfunction
 function! gordon#SettingVimGo()
 	let g:go_fmt_command = "goimports"
+	let g:go_version_warning = 0
 endfunction
 
 function s:ChangeWinwidth(flag)
