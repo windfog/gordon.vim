@@ -24,7 +24,10 @@ function! gordon#SettingQuickConfig()
 	nnoremap <leader>sv :source $MYVIMRC \| bdelete .vimrc <CR>
 endfunction
 function! gordon#SettingCopy()
-	vnoremap <leader>c :<CR>:let temp=@" \| execute "normal! vgvy" \| system("pbcopy",@") \| let @"=temp<CR>
+	vnoremap <leader>c :<CR>:let temp=@" \| execute "normal! vgvy" \| call system("pbcopy",@") \| let @"=temp<CR>
+endfunction
+function! gordon#SettingVimGo()
+	let g:go_fmt_command = "goimports"
 endfunction
 
 function s:ChangeWinwidth(flag)
