@@ -18,6 +18,7 @@ endfunction
 function! gordon#SettingOneKeyRun()
 	autocmd FileType python nnoremap <leader>r :!clear \| python %<CR>
 	autocmd FileType python nnoremap <leader>3r :!clear \| python3 %<CR>
+	autocmd FileType go     nnoremap <leader>r :!clear \| go run %<CR>
 endfunction
 function! gordon#SettingQuickConfig()
 	nnoremap <leader>ev :e $MYVIMRC<CR>
@@ -29,6 +30,7 @@ endfunction
 function! gordon#SettingVimGo()
 	let g:go_fmt_command = "goimports"
 	let g:go_version_warning = 0
+	autocmd FileType go inoremap <silent><leader>i <ESC>:execute "GoImport " . expand('<cword>')<CR>a
 endfunction
 
 function s:ChangeWinwidth(flag)
