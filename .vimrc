@@ -1,3 +1,5 @@
+set encoding=utf-8
+set termencoding=utf-8
 "设置leader
 let mapleader=','
 "Vundle需要，设置不兼容vi，默认是兼容的
@@ -20,6 +22,8 @@ Plugin 'honza/vim-snippets'
 Plugin 'windfog/gordon.vim'
 "Add translate plugin
 Plugin 'windfog/en-ch-translate.vim'
+"安装 vim-go
+Plugin 'fatih/vim-go'
 "＊＊＊＊＊＊被管理插件结束＊＊＊＊＊＊＊
 
 "vundle 运行结束
@@ -31,6 +35,9 @@ filetype plugin indent on
 call gordon#SettingNerdTree()
 call gordon#SettingUltisnips()
 call gordon#SettingOneKeyRun()
+call gordon#SettingQuickConfig()
+call gordon#SettingCopy()
+call gordon#SettingVimGo()
 ""＊＊＊＊＊＊插件个性化结束＊＊＊＊＊＊＊＊＊
 
 "＊＊＊＊＊＊配置vundle结束＊＊＊＊＊＊＊
